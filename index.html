@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURUM — More Than Coffee. A Little Moment of Gold.</title>
+  <meta name="description" content="AURUM means Gold. Thoughtfully crafted coffee, comforting flavours, and little moments worth slowing down for." />
+
+  <!-- Editorial Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="./css/variables.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <!-- Icons & Animation Libraries -->
+  <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <!-- Skip to content -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ======================================================================
+       A. NAVIGATION BAR
+       ====================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner container">
+      <a href="#home" class="brand-lockup" aria-label="AURUM Home">
+        <svg class="brand-emblem" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="1" />
+          <circle cx="20" cy="20" r="13.5" stroke="currentColor" stroke-width="0.6" stroke-dasharray="2 2" />
+          <path d="M20 7.5C20 7.5 26 14.5 26 20.5C26 24.0899 23.3137 27 20 27C16.6863 27 14 24.0899 14 20.5C14 14.5 20 7.5 20 7.5Z" stroke="currentColor" stroke-width="1.1" />
+          <path d="M20 12.5C18.5 16.5 21.5 20.5 20 25" stroke="currentColor" stroke-width="0.9" stroke-linecap="round" />
+        </svg>
+        <span class="brand-wordmark">AURUM</span>
+      </a>
+
+      <nav class="navbar__links" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#story" class="nav-link">Our Story</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#contact" class="btn btn--nav">
+          <span>Visit Us</span>
+          <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+        </a>
+
+        <button
+          class="hamburger"
+          id="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobile-drawer"
+        >
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Editorial Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer__inner">
+      <div class="mobile-drawer__eyebrow">AURUM</div>
+      <nav class="mobile-drawer__nav" aria-label="Mobile Navigation">
+        <a href="#home" class="mobile-nav-link">Home</a>
+        <a href="#story" class="mobile-nav-link">Our Story</a>
+        <a href="#experiences" class="mobile-nav-link">Experiences</a>
+        <a href="#menu" class="mobile-nav-link">Menu</a>
+        <a href="#gallery" class="mobile-nav-link">Gallery</a>
+        <a href="#contact" class="mobile-nav-link">Visit Us</a>
+      </nav>
+      <div class="mobile-drawer__footer">
+        <p>Made for the moments that turn golden.</p>
+        <a href="#contact" class="btn btn--primary mobile-nav-link">Find Us</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- ====================================================================
+         B. HERO SECTION
+         ==================================================================== -->
+    <section class="hero" id="home">
+      <div class="hero__watermark" aria-hidden="true">AURUM</div>
+
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <div class="hero__eyebrow gs-hero-fade">
+            <span class="eyebrow-dot" aria-hidden="true"></span>
+            <span>AURUM</span>
+          </div>
+
+          <h1 class="hero__title">
+            <span class="line-mask"><span class="line-inner gs-hero-line">More than coffee.</span></span>
+            <span class="line-mask"><span class="line-inner gs-hero-line">A little moment <em>of gold.</em></span></span>
+          </h1>
+
+          <p class="hero__subtitle gs-hero-fade">
+            Thoughtfully crafted coffee, comforting flavours, and little moments worth slowing down for.
+          </p>
+
+          <div class="hero__ctas gs-hero-fade">
+            <a href="#menu" class="btn btn--primary">
+              <span>Explore Our Menu</span>
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </a>
+            <a href="#story" class="btn btn--ghost">
+              <span>Discover AURUM</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__image-frame gs-hero-reveal">
+            <img
+              id="hero-image"
+              src="./assets/images/hero-espresso.jpg"
+              alt="Rich golden crema espresso extracting into a matte ceramic cup in warm morning light"
+              class="hero__img"
+              data-parallax="0.08"
+            />
+          </div>
+
+          <!-- Subtle Floating Editorial Seal -->
+          <div class="hero__seal gs-hero-float" aria-hidden="true">
+            <svg viewBox="0 0 120 120" class="seal-svg">
+              <defs>
+                <path id="seal-circle" d="M 60, 60 m -44, 0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0" />
+              </defs>
+              <text class="seal-text">
+                <textPath href="#seal-circle">AURUM · CRAFTED COFFEE · GOLDEN MOMENTS ·</textPath>
+              </text>
+              <circle cx="60" cy="60" r="24" stroke="currentColor" stroke-width="0.75" fill="none" />
+              <path d="M60 49C60 49 65.5 55.5 65.5 60.5C65.5 63.8 63 66.5 60 66.5C57 66.5 54.5 63.8 54.5 60.5C54.5 55.5 60 49 60 49Z" stroke="currentColor" stroke-width="1" fill="none" />
+            </svg>
+          </div>
+
+          <!-- Decorative botanical line accent -->
+          <svg class="hero__flourish" viewBox="0 0 120 60" fill="none" aria-hidden="true">
+            <path d="M4 52C28 48 48 22 114 8" stroke="currentColor" stroke-width="0.9" stroke-dasharray="3 4" />
+            <circle cx="114" cy="8" r="2.5" fill="currentColor" />
+          </svg>
+        </div>
+      </div>
+
+      <a href="#story" class="scroll-indicator gs-hero-fade" aria-label="Scroll to Our Story">
+        <span class="scroll-indicator__text">Scroll</span>
+        <span class="scroll-indicator__line"></span>
+      </a>
+    </section>
+
+    <!-- ====================================================================
+         C. ABOUT / OUR STORY
+         ==================================================================== -->
+    <section class="story section" id="story">
+      <div class="container story__grid">
+        <div class="story__media">
+          <div class="reveal-frame gs-reveal-img">
+            <img
+              id="story-image"
+              src="https://images.unsplash.com/photo-1514066558159-fc8c737ef259?auto=format&fit=crop&w=1000&q=85"
+              alt="Minimalist AURUM café bar and coffee workspace in warm natural light"
+              loading="lazy"
+            />
+          </div>
+          <p class="story__annotation gs-fade-up" aria-hidden="true">
+            Slow mornings, warm conversations &amp; golden light.
+          </p>
+        </div>
+
+        <div class="story__content">
+          <span class="section-eyebrow gs-fade-up">01 / Our Story</span>
+          <h2 class="section-heading gs-fade-up">A little about <em>AURUM.</em></h2>
+
+          <div class="story__prose">
+            <p class="story__lead gs-fade-up">
+              At AURUM, coffee is more than a daily ritual. It's about the conversations that last longer, the moments that feel slower, and the little things that make an ordinary day special.
+            </p>
+            <p class="gs-fade-up">
+              From thoughtfully crafted coffee to indulgent chocolate creations and refreshing blends, every cup is an invitation to pause, explore, and enjoy.
+            </p>
+            <p class="story__closing gs-fade-up">
+              Welcome to AURUM. A little moment of gold.
+            </p>
+          </div>
+
+          <div class="story__meta gs-fade-up">
+            <div class="story__stat">
+              <span class="story__stat-label">Philosophy</span>
+              <span class="story__stat-value">Small-batch craft &amp; unhurried warmth</span>
+            </div>
+            <div class="story__stat">
+              <span class="story__stat-label">Etymology</span>
+              <span class="story__stat-value">AURUM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         D. SIGNATURE EXPERIENCES
+         ==================================================================== -->
+    <section class="experiences section" id="experiences">
+      <div class="container">
+        <div class="section-header gs-fade-up">
+          <span class="section-eyebrow">02 / Signature Experiences</span>
+          <div class="section-header__row">
+            <h2 class="section-heading">Four ways we pour <em>warmth.</em></h2>
+            <p class="section-intro">
+              Each category on our bar is composed around texture, temperature, and memory—designed to invite curiosity.
+            </p>
+          </div>
+        </div>
+
+        <div class="exp-grid">
+          <!-- 1. Signature Coffee (Tall Feature) -->
+          <article class="exp-card exp-card--tall gs-fade-up">
+            <div class="exp-card__media">
+              <img
+                src="./assets/images/exp-coffee.jpg"
+                alt="Handmade stoneware cup with delicate rosetta latte art on travertine stone"
+                loading="lazy"
+              />
+            </div>
+            <div class="exp-card__body">
+              <span class="exp-card__num">01</span>
+              <h3 class="exp-card__title">Signature Coffee</h3>
+              <p class="exp-card__desc">
+                From pure black espresso pulls to velvety pistachio and hazelnut cappuccinos crafted with balanced crema.
+              </p>
+              <a href="#menu" class="exp-card__link" data-menu-target="just-hot-white">
+                <span>Explore Menu</span>
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 2. Hot Chocolate (Offset Wide) -->
+          <article class="exp-card exp-card--offset gs-fade-up">
+            <div class="exp-card__media">
+              <img
+                src="./assets/images/exp-chocolate.jpg"
+                alt="Velvety Belgian hot chocolate in a minimalist ceramic mug with cocoa dusting"
+                loading="lazy"
+              />
+            </div>
+            <div class="exp-card__body">
+              <span class="exp-card__num">02</span>
+              <h3 class="exp-card__title">Hot Chocolate</h3>
+              <p class="exp-card__desc">
+                Melted 100% Belgian cocoa, Biscoff biscuit crumbles, and rich frothed milk made for comforting slow sips.
+              </p>
+              <a href="#menu" class="exp-card__link" data-menu-target="hot-chocolate">
+                <span>Explore Menu</span>
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 3. Crafted Frappes -->
+          <article class="exp-card exp-card--compact gs-fade-up">
+            <div class="exp-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1530373239216-42518e6b4063?auto=format&fit=crop&w=1000&q=85"
+                alt="Ice-blended crafted coffee frappe served cold"
+                loading="lazy"
+              />
+            </div>
+            <div class="exp-card__body">
+              <span class="exp-card__num">03</span>
+              <h3 class="exp-card__title">Crafted Frappes</h3>
+              <p class="exp-card__desc">
+                Smooth, ice-cream-free cold blends, brown butter swirls, tiramisu notes, and double-caffeinated classics.
+              </p>
+              <a href="#menu" class="exp-card__link" data-menu-target="blended-frappes">
+                <span>Explore Menu</span>
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- 4. Innovative Beverages -->
+          <article class="exp-card exp-card--feature gs-fade-up">
+            <div class="exp-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=1000&q=85"
+                alt="Innovative specialty coffee pour with rich crema"
+                loading="lazy"
+              />
+            </div>
+            <div class="exp-card__body">
+              <span class="exp-card__num">04</span>
+              <h3 class="exp-card__title">Innovative Beverages</h3>
+              <p class="exp-card__desc">
+                Botanical espresso tonics, burnt jaggery lattes, cask-aged cranberry brews, and sparkling citrus infusions.
+              </p>
+              <a href="#menu" class="exp-card__link" data-menu-target="too-innovative">
+                <span>Explore Menu</span>
+                <i data-lucide="arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         4. MENU HIGHLIGHT SECTION
+         ==================================================================== -->
+    <section class="highlights section" id="highlights">
+      <div class="container">
+        <div class="section-header gs-fade-up">
+          <span class="section-eyebrow">03 / Curated Highlights</span>
+          <div class="section-header__row">
+            <h2 class="section-heading">Something a little <em>different.</em></h2>
+            <a href="#menu" class="btn btn--ghost">
+              <span>See Full Menu</span>
+              <i data-lucide="arrow-down" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="highlights-grid" id="highlights-grid">
+          <!-- Populated dynamically from HIGHLIGHTS_DATA -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         E. FULL MENU SECTION
+         ==================================================================== -->
+    <section class="menu-section section" id="menu">
+      <div class="container">
+        <div class="menu-header gs-fade-up">
+          <div>
+            <span class="section-eyebrow">04 / The Complete Menu</span>
+            <h2 class="section-heading">The AURUM <em>Menu.</em></h2>
+          </div>
+
+          <div class="menu-search">
+            <label for="menu-search-input" class="sr-only">Search the AURUM menu</label>
+            <i data-lucide="search" class="menu-search__icon" aria-hidden="true"></i>
+            <input
+              type="search"
+              id="menu-search-input"
+              class="menu-search__input"
+              placeholder="Search espresso, pistachio, biscoff, chai..."
+              autocomplete="off"
+            />
+            <button type="button" id="menu-search-clear" class="menu-search__clear" aria-label="Clear search" hidden>
+              <i data-lucide="x" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Category Tabs -->
+        <div class="menu-tabs-wrapper">
+          <div class="menu-tabs" id="menu-tabs" role="tablist" aria-label="Menu Categories">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- Search Status Banner -->
+        <div class="menu-search-status" id="menu-search-status" aria-live="polite" hidden></div>
+
+        <!-- Menu Display Canvas -->
+        <div class="menu-canvas" id="menu-canvas" role="tabpanel">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Menu Disclaimer -->
+        <p class="menu-disclaimer">
+          A 5% service charge is optional. Kindly mention your preference while requesting the bill.
+        </p>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         5. GALLERY
+         ==================================================================== -->
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <div class="section-header gs-fade-up">
+          <span class="section-eyebrow">05 / Visual Journal</span>
+          <div class="section-header__row">
+            <h2 class="section-heading">Moments caught <em>in gold.</em></h2>
+            <p class="section-intro">
+              Quiet mornings at the brew bar, rich chocolate pours, and the textures of our space. Click any frame to inspect.
+            </p>
+          </div>
+        </div>
+
+        <div class="gallery-grid" id="gallery-grid">
+          <!-- Populated dynamically from MEDIA_CONFIG.gallery -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         6. EXPERIENCE / WHY AURUM
+         ==================================================================== -->
+    <section class="why-AURUM section" id="why-AURUM">
+      <div class="container">
+        <div class="why-header gs-fade-up">
+          <span class="section-eyebrow">06 / The Experience</span>
+          <h2 class="section-heading">Good coffee. Good company.<br /><em>Golden moments.</em></h2>
+        </div>
+
+        <div class="pillars-grid">
+          <article class="pillar gs-fade-up">
+            <div class="pillar__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="1" />
+                <path d="M16 26C16 30.4183 19.5817 34 24 34C28.4183 34 32 30.4183 32 26H16Z" stroke="currentColor" stroke-width="1.2" />
+                <path d="M21 15C21 17 22.5 18 22.5 20M26.5 15C26.5 17 28 18 28 20" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="pillar__title">Crafted With Care</h3>
+            <p class="pillar__desc">
+              Thoughtfully prepared beverages made to be enjoyed.
+            </p>
+          </article>
+
+          <article class="pillar gs-fade-up">
+            <div class="pillar__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <path d="M24 6L28.5 19.5L42 24L28.5 28.5L24 42L19.5 28.5L6 24L19.5 19.5L24 6Z" stroke="currentColor" stroke-width="1.1" />
+                <circle cx="24" cy="24" r="4" stroke="currentColor" stroke-width="1" />
+              </svg>
+            </div>
+            <h3 class="pillar__title">Flavours Worth Exploring</h3>
+            <p class="pillar__desc">
+              From classic espresso to unexpected and creative combinations.
+            </p>
+          </article>
+
+          <article class="pillar gs-fade-up">
+            <div class="pillar__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none">
+                <circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" />
+                <circle cx="24" cy="24" r="9" stroke="currentColor" stroke-width="1.2" />
+                <path d="M24 19V24L27.5 26" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="pillar__title">A Place To Slow Down</h3>
+            <p class="pillar__desc">
+              A welcoming space for conversations, creativity, and little everyday escapes.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================================================================
+         7. VISIT US / CONTACT
+         ==================================================================== -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="section-header gs-fade-up">
+          <span class="section-eyebrow">07 / Visit Us</span>
+          <h2 class="section-heading">Find your <em>moment.</em></h2>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Details & Map Placeholder -->
+          <div class="contact-info gs-fade-up">
+            <div class="contact-details">
+              <div class="contact-item">
+                <span class="contact-item__label">Address</span>
+                <p class="contact-item__value">24, Khan Market, Middle Lane, New Delhi — 110003</p>
+              </div>
+              <div class="contact-item">
+                <span class="contact-item__label">Opening Hours</span>
+                <p class="contact-item__value">Everyday · 8:00 AM – 11:00 PM</p>
+              </div>
+              <div class="contact-item">
+                <span class="contact-item__label">Telephone</span>
+                <p class="contact-item__value"><a href="tel:+919868555382">+91 9868555382</a></p>
+              </div>
+              <div class="contact-item">
+                <span class="contact-item__label">Email &amp; Social</span>
+                <p class="contact-item__value">
+                  <a href="mailto:theAURUMlife@gmail.com">theAURUMlife@gmail.com</a>
+                  <span class="contact-sep">·</span>
+                  <a href="#instagram-placeholder" aria-label="AURUM Instagram placeholder">[@AURUM.cafe]</a>
+                </p>
+              </div>
+            </div>
+
+            <a
+              href="https://maps.google.com/?q=Khan+Market+New+Delhi"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--primary contact-directions"
+              id="directions-btn"
+            >
+              <span>Get Directions</span>
+              <i data-lucide="navigation" aria-hidden="true"></i>
+            </a>
+          </div>
+
+          <!-- Right: Frontend Enquiry Form -->
+          <div class="contact-form-wrap gs-fade-up">
+            <h3 class="contact-form__title">Send a note</h3>
+            <p class="contact-form__sub">
+              Private gatherings, collaborations, or simply saying hello.
+            </p>
+
+            <form id="enquiry-form" class="enquiry-form" novalidate>
+              <div class="form-field">
+                <label for="form-name">Name</label>
+                <input type="text" id="form-name" name="name" placeholder="Your full name" required />
+                <span class="form-error" id="error-name" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="form-email">Email</label>
+                <input type="email" id="form-email" name="email" placeholder="you@example.com" required />
+                <span class="form-error" id="error-email" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="form-subject">Subject</label>
+                <input type="text" id="form-subject" name="subject" placeholder="Table enquiry, feedback, collaboration..." required />
+                <span class="form-error" id="error-subject" aria-live="polite"></span>
+              </div>
+
+              <div class="form-field">
+                <label for="form-message">Message</label>
+                <textarea id="form-message" name="message" rows="4" placeholder="Tell us a little more..." required></textarea>
+                <span class="form-error" id="error-message" aria-live="polite"></span>
+              </div>
+
+              <button type="submit" class="btn btn--primary form-submit">
+                <span>Send Enquiry</span>
+                <i data-lucide="send" aria-hidden="true"></i>
+              </button>
+
+              <div class="form-success" id="form-success" role="status" aria-live="polite" hidden>
+                <i data-lucide="check-circle-2" aria-hidden="true"></i>
+                <div>
+                  <strong>Preview validated.</strong>
+                  <span>Your enquiry details look good. (This is a frontend-only preview — connect a form endpoint or email service before going live.)</span>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================================================================
+       8. FOOTER
+       ==================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__brand">
+          <div class="footer__wordmark-row">
+            <svg class="brand-emblem brand-emblem--lg" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="1" />
+              <path d="M20 7.5C20 7.5 26 14.5 26 20.5C26 24.0899 23.3137 27 20 27C16.6863 27 14 24.0899 14 20.5C14 14.5 20 7.5 20 7.5Z" stroke="currentColor" stroke-width="1.1" />
+            </svg>
+            <span class="footer__wordmark">AURUM</span>
+          </div>
+          <p class="footer__statement">Made for the moments that turn golden.</p>
+        </div>
+
+        <div class="footer__cols">
+          <div class="footer__col">
+            <span class="footer__col-title">Navigate</span>
+            <a href="#home">Home</a>
+            <a href="#story">Our Story</a>
+            <a href="#experiences">Experiences</a>
+            <a href="#menu">Full Menu</a>
+            <a href="#gallery">Gallery</a>
+          </div>
+          <div class="footer__col">
+            <span class="footer__col-title">Visit</span>
+            <span>24, Khan Market, Middle Lane, New Delhi — 110003</span>
+            <span>Everyday · 8 AM – 11 PM</span>
+            <span>+91 9868555382</span>
+            <a href="#instagram-placeholder">Instagram [@AURUM.cafe]</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; <span id="footer-year">2026</span> AURUM Café. All rights reserved.</p>
+        <button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top">
+          <span>Back to top</span>
+          <i data-lucide="arrow-up" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ====================================================================
+       GALLERY LIGHTBOX MODAL
+       ==================================================================== -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image viewer" hidden>
+    <div class="lightbox__backdrop" data-lightbox-close></div>
+    <button type="button" class="lightbox__close" data-lightbox-close aria-label="Close lightbox">
+      <i data-lucide="x" aria-hidden="true"></i>
+    </button>
+    <button type="button" class="lightbox__nav lightbox__nav--prev" id="lightbox-prev" aria-label="Previous image">
+      <i data-lucide="chevron-left" aria-hidden="true"></i>
+    </button>
+    <figure class="lightbox__figure">
+      <img src="" alt="" id="lightbox-img" class="lightbox__img" />
+      <figcaption class="lightbox__caption">
+        <span id="lightbox-caption-text"></span>
+        <span id="lightbox-counter" class="lightbox__counter"></span>
+      </figcaption>
+    </figure>
+    <button type="button" class="lightbox__nav lightbox__nav--next" id="lightbox-next" aria-label="Next image">
+      <i data-lucide="chevron-right" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- Application Script -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
